@@ -49,17 +49,74 @@ class Comdominio:
 
     # Agregar 4 metodos adicionales
 
+
+
 class Guardia:
-    # Crear 3 atributos y 4 metodos
-    pass
+    # 3 atributos y 4 metodos
+
+    empresa_contratista = 'Tus guardias'
+    tipo_contrato = 'Contrato de plata'
+    sueldo_bruto = '800.000 mil pesos'
+
+    
+    def __init__(self, nombre, rut, sexo):
+        self.nombre = nombre
+        self.rut = rut
+        self.sexo = sexo
+
+    def desayunar(self):
+        print("8:00 am hora de desayunar en el casino")
+
+    def almuerzo(self):
+        print('13:00 pm hora de almorzar en el casino')
+
+    def fin_jornada(self):
+        print('17:00 pm hora de fin de jornada')
+
+
 
 class UnidadHabitacional:
-    # Crear 3 atributos y 4 metodos
-    pass
+    # 3 atributos y 4 metodos
+
+    tipo = 'Material sólido'
+    cantidad_habitaciones = 6
+    extras = 'calefaccion central y aire acondicionado'
+
+    def __init__(self, numero):
+        self.numero = numero 
+
+    def abrir_puerta(self):
+        print('Se abre la puerta del hogar numero', self.numero)
+
+    def cerrar_puerta(self):
+        print('Se cierra la puerta del hogar numero', self.numero)
+
+    def prender_luces(self):
+        print('Prender luces')
+
+
 
 class CuentaCorriente:
-    # Crear 3 atributos y 4 metodos
-    pass
+    # 3 atributos y 4 metodos
+
+    banco = 'Banco Terra'
+    tipo = 'Cuenta Corriente'
+    beneficios = 'No se cobra comision en ninguna operación'
+    
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.saldo =saldo
+
+    def girar(self, giro):
+        self.saldo -= giro
+        print('Se ha efectuado un giro por el monto de', giro)
+
+    def abono(self, abono):
+        self.saldo += abono
+        print('Se ha abonado la cantidad de', abono)
+
+    def consulta_saldo(self):
+        print('El saldo actual es', self.saldo)
 
 
 class Terreno:
@@ -72,9 +129,13 @@ class Terreno:
 class Comunidad:
     pass
 
+
 # Crear 5 atributos y 6 metodos propios que diferencien a cada una de estas subclases . Demostrar 2 casos de polimorfismo en metodos.
 class CondominioVertical(Terreno, Comunidad):
     pass
 
 class CondominioHorizontal(Terreno, Comunidad):
     pass
+
+
+input()
