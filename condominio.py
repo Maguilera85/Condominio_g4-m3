@@ -160,10 +160,10 @@ class Comunidad: #Sebastian
 
 
 # Crear 5 atributos y 6 metodos propios que diferencien a cada una de estas subclases . Demostrar 2 casos de polimorfismo en metodos.
-class CondominioVertical(Terreno, Comunidad):
+class CondominioVertical(Terreno, Comunidad): # Sebastian
     pass
 
-class CondominioHorizontal(Terreno, Comunidad):
+class CondominioHorizontal(Terreno, Comunidad): # Sebastian
     pass
 
 
