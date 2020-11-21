@@ -120,8 +120,34 @@ class CuentaCorriente:
 
 
 class Terreno:
-    # Crear 6 atributos y 6 metodos
-    pass
+    # 6 atributos y 6 metodos
+
+    nombre_dueño_terreno = 'Metropolis'
+    seguros = 'terreno con seguros comprometidos'
+    tipo = 'terreno privado'
+    sector = 'urbano'
+    finalidad = 'Habitacional'
+    extensiones = 'Para fines de contruccion horizontal y vertical'
+    
+    def __init__(self, nombre_terreno):
+        self.nombre_terreno = nombre_terreno
+
+    def consulta_hta(self):
+        print('Las hectareas edificafles consisten en 10 hectareas')
+
+    def factibilidad_agua_potable(self):
+        print('100 por ciento de factibilidad de agua potable')
+
+    def factibilidad_electricidad(self):
+        print('100 por ciento de factibilidad de electricidad')
+
+    def factiilidad_servicios_digitales(self):
+        print('100 por ciento de factibilidad de servicios digitales')
+
+    def seguridad_terreno(self):
+        print('El terreno cuenta con todas las normas de seguridad para construir')
+
+
 
 
 # Crear dos clases con herencia multiple de las clases Terreno y Comunidad, que se llamen CondominioVertical y CondominioHorizontal
