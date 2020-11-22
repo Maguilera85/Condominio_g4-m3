@@ -55,7 +55,7 @@ class Condominio:
 
 
 class Guardia:
-    # 3 atributos y 4 metodos
+    # 3 atributos y 4 metodos OK
 
     empresa_contratista = 'Tus guardias'
     tipo_contrato = 'Contrato de plata'
@@ -79,7 +79,7 @@ class Guardia:
 
 
 class UnidadHabitacional:
-    # 3 atributos y 4 metodos
+    # 3 atributos y 4 metodos OK
 
     tipo = 'Material sólido'
     cantidad_habitaciones = 6
@@ -100,7 +100,7 @@ class UnidadHabitacional:
 
 
 class CuentaCorriente:
-    # 3 atributos y 4 metodos
+    # 3 atributos y 4 metodos OK
 
     banco = 'Banco Terra'
     tipo = 'Cuenta Corriente'
@@ -123,7 +123,7 @@ class CuentaCorriente:
 
 
 class Terreno:
-    # 6 atributos y 6 metodos
+    # 6 atributos y 6 metodos OK
 
     nombre_dueño_terreno = 'Metropolis'
     seguros = 'terreno con seguros comprometidos'
@@ -155,18 +155,6 @@ class Terreno:
 
 # Crear dos clases con herencia multiple de las clases Terreno y Comunidad, que se llamen CondominioVertical y CondominioHorizontal
 
-<<<<<<< HEAD
-class Comunidad: #Sebastian
-    pass
-
-
-# Crear 5 atributos y 6 metodos propios que diferencien a cada una de estas subclases . Demostrar 2 casos de polimorfismo en metodos.
-class CondominioVertical(Terreno, Comunidad): # Sebastian
-    pass
-
-class CondominioHorizontal(Terreno, Comunidad): # Sebastian
-    pass
-=======
 class Comunidad:
 
     buena_convivencia = 'Respeta las reglas de convivencia'
@@ -192,13 +180,15 @@ class CondominioVertical(Terreno, Comunidad):
         self.nombre_condominio_vertical = nombre_condominio_vertical
 
     # llamamoa a métodos de la clase Terreno
-    super().factibilidad_agua_potable()
-    #super().factibilidad_electricidad()
-    #super().factiilidad_servicios_digitales()
+    def met_terr(self):
+        super().factibilidad_agua_potable()
+        super().factibilidad_electricidad()
+        super().factiilidad_servicios_digitales()
 
     # llamamos a métodos de la clase Comunidad
-    #super().ComiteMascotas()
-    #super().JuegosPasatiempos()
+    def met_com(self):
+        super().ComiteMascotas()
+        super().JuegosPasatiempos()
 
     # métodos propios de la clase CondominioVertical
     def Ascensor(self):
@@ -208,7 +198,7 @@ class CondominioVertical(Terreno, Comunidad):
         pass
 
     def Quincho(sefl):
-
+        pass
 
     def Piscina(self):
         pass
@@ -220,7 +210,7 @@ class CondominioVertical(Terreno, Comunidad):
 
 
 
-class CondominioHorizontal(Terreno, Comunidad):
+class CondominioHorizontal(Terreno, Comunidad): # Seba
     # 5 atributos
     tipo_condominio_horizontal = 'Conjunto privado de casas'
 
@@ -229,13 +219,15 @@ class CondominioHorizontal(Terreno, Comunidad):
 
 
     # llamamoa a métodos de la clase Terreno
-    super().factibilidad_agua_potable()
-    #super().factibilidad_electricidad()
-    #super().factiilidad_servicios_digitales()
+    def met_terr(self):
+        super().factibilidad_agua_potable()
+        super().factibilidad_electricidad()
+        super().factiilidad_servicios_digitales()
 
     # llamamos a métodos de la clase Comunidad
-    #super().ComiteMascotas()
-    #super().JuegosPasatiempos()
+    def met_com(self):
+        super().ComiteMascotas()
+        super().JuegosPasatiempos()
 
     # métodos propios de la clase CondomioHorizontal
 
@@ -255,24 +247,6 @@ class CondominioHorizontal(Terreno, Comunidad):
         pass
 
 
-
-
-
-if __name__ == "__main__":
-    # Pruebas de la clase Condominio
-    condominio1 = Condominio() # Creo instancia de condominio
-    print(condominio1.get_direccion()) # muestra direccion
-    condominio1.set_direccion("Esta es la nueva direccion") # cambio direccion
-    print(condominio1.get_direccion()) # imprimo direccion nueva
-    condominio1.set_administrador("Inserte aquí un administrador") # Agrego administrador
-    print(condominio1.get_administrador()) # imprimo nombre del administrador agregado
-    condominio1.add_guardia("Inserte aquí un guardia") # Agrego guardia a lista
-    print(condominio1.get_guardias()) # Imprimo lista de guardias
-    condominio1.add_guardia("Guardia a eliminar") # crear guardia para ser eliminado
-    print(condominio1.get_guardias()) # Imprimo lista de guardias, para verificacion
-    condominio1.del_guardia("Guardia a eliminar") # elimino guarida de lista
-    print(condominio1.get_guardias()) # Imprimo lista de guardias, para verificacion
->>>>>>> f74eb2e5b67ce6c19d416a553d58365398e73d6c
 
 
 
