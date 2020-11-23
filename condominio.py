@@ -231,7 +231,7 @@ class CondominioVertical(Terreno, Comunidad):
     def Terraza(self):
         print("Hermosas terrezas, únicas en Chile")
 
-    def Quincho(sefl):
+    def Quincho(self):
         print("Los mejores asados en tu quincho 3.0 'Lo último en tecnología'")
 
     def Piscina(self):
@@ -262,6 +262,7 @@ class CondominioHorizontal(Terreno, Comunidad): # Se asignan 5 atributos
         super().factibilidad_agua_potable()
         self.mensaje = "Ya no tiene agua potable"
         return self.mensaje
+
     #polimorfismo_2
 
     def consulta_hta(self):
@@ -276,8 +277,8 @@ class CondominioHorizontal(Terreno, Comunidad): # Se asignan 5 atributos
 
     # métodos propios de la clase CondomioHorizontal
 
-    def gimnasio(self):
-        print("Gimnasio abierto 24/7")
+    def cine(self):
+        print("Contamos con una sala de cina en la junta vecinal")
 
     def multicancha(self):
         print("Multicanchas de futbol y tenis")
@@ -285,8 +286,8 @@ class CondominioHorizontal(Terreno, Comunidad): # Se asignan 5 atributos
     def estacionamietos(self):
         print("Estacionamientos de visita sin limite de tiempo")
 
-    def puntoVerde(self):
-        print("Nos enfocamos en los puntos verdes")
+    def ciclovia(self):
+        print("Tiene ciclovia")
 
     def minimarket(self):
         print("Contamos con nuestros propios MiniMarket's dentro del condominio")
@@ -325,6 +326,6 @@ if __name__ == "__main__":
     print("El nombre del condominio es:", condominio_horizonal.nombre_condominio_h, "&", condominio_horizonal2.nombre_condominio_h) 
     print("#### APLICANDO POLIMORFISMO ####", condominio_horizonal.factibilidad_agua_potable())
     print("#### APLICANDO POLIMORFISMO ####", condominio_horizonal.consulta_hta())
-    print(condominio_horizonal.gimnasio(), condominio_horizonal.multicancha(), condominio_horizonal.estacionamietos(), 
-            condominio_horizonal.puntoVerde(), condominio_horizonal.minimarket())
+    print(condominio_horizonal.cine(), condominio_horizonal.multicancha(), condominio_horizonal.estacionamietos(), 
+            condominio_horizonal.ciclovia(), condominio_horizonal.minimarket())
 
