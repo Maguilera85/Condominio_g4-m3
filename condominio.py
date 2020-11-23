@@ -17,7 +17,12 @@ class Condominio:
     num_unidades_habitacionales = 0
     lista_unidades = []
     cuenta_corriente = ""
-    # Agregar 4 atributos adicionales (Walter)
+    
+    # atributos adicionales
+    áreas_verdes = 'Plaza principal'
+    sistema_riego = 'automatico'
+    tipo_cableado = 'bajo tierra'
+    camino_publico = 'cemento alta resistencia'
 
 
     def __init__(self):
@@ -50,7 +55,19 @@ class Condominio:
     def get_unidades(self):
         return self.num_unidades_habitacionales
 
-    # Agregar 4 metodos adicionales (Walter)
+    # Agregar 4 metodos adicionales Servicios REVISAR
+
+    def ServicioBasura(self):
+        print('Recolección de basura servicios operativo')
+
+    def ServicioGasfiter(self):
+        print('Servicio de Gasfiter gratis para propietarios')
+
+    def ServicioPlomeria(self):
+        print('Servicio de plomeria gratis para propietarios')
+
+    def ServidioJardineria(self):
+        print('Servicio de jardinerai gratis para propietarios')
 
 
 
@@ -186,6 +203,7 @@ class CondominioVertical(Terreno, Comunidad):
 
     def __init__(self, nombre_condominio_vertical):
         self.nombre_condominio_vertical = nombre_condominio_vertical
+        super().factibilidad_agua_potable()
 
     # llamamos a métodos de la clase Terreno
     def met_terr(self):
@@ -226,43 +244,45 @@ class CondominioVertical(Terreno, Comunidad):
 
 
 
-class CondominioHorizontal(Terreno, Comunidad): # Seba
-    # 5 atributos
-    tipo_condominio_horizontal = 'Conjunto privado de casas'
+# class CondominioHorizontal(Terreno, Comunidad): # Seba
+#     # 5 atributos
+#     tipo_condominio_horizontal = 'Conjunto privado de casas'
 
-    def __init__(self, nombre_condominio_h):
-        self.nombre_condominio_h = nombre_condominio_h
+#     def __init__(self, nombre_condominio_h):
+#         self.nombre_condominio_h = nombre_condominio_h
+#         # llamamoa a métodos de la clase Terreno
+#         super().factibilidad_electricidad()
+#         super().factiilidad_servicios_digitales(
+#         super().factibilidad_agua_potable()
 
 
     # llamamoa a métodos de la clase Terreno
-    def met_terr(self):
-        super().factibilidad_agua_potable()
-        super().factibilidad_electricidad()
-        super().factiilidad_servicios_digitales()
+    # def met_terr(self):
+    #     super().factibilidad_agua_potable()
+    #     super().factibilidad_electricidad()
+    #     super().factiilidad_servicios_digitales()
 
     # llamamos a métodos de la clase Comunidad
-    def met_com(self):
-        super().ComiteMascotas()
-        super().JuegosPasatiempos()
+    # def met_com(self):
+    #     super().ComiteMascotas()
+    #     super().JuegosPasatiempos()
 
     # métodos propios de la clase CondomioHorizontal
 
-    def Plaza(self):
-        pass
+    # def Plaza(self):
+    #     pass
 
-    def Multicancha(self):
-        pass
+    # def Multicancha(self):
+    #     pass
 
-    def Estacionamietos(self):
-        pass
+    # def Estacionamietos(self):
+    #     pass
 
-    def PuntoVerde(self):
-        pass
+    # def PuntoVerde(self):
+    #     pass
 
-    def Minimarket(self):
-        pass
-
-
+    # def Minimarket(self):
+    #     pass
 
 
 
