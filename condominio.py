@@ -143,9 +143,12 @@ class Terreno:
 
     def factibilidad_electricidad(self):
         print('100 por ciento de factibilidad de electricidad')
+        
 
     def factiilidad_servicios_digitales(self):
-        print('100 por ciento de factibilidad de servicios digitales')
+        self.message = '100 por ciento de factibilidad de servicios digitales'
+        self.naci_aqui = 'Soy un mensaje que viene de la clase Terreno'
+        return self.message, self.naci_aqui
 
     def seguridad_terreno(self):
         print('El terreno cuenta con todas las normas de seguridad para construir')
@@ -166,8 +169,9 @@ class Comunidad:
         print('Ven a participar del comite de mascotas')
 
     def JuegosPasatiempos(self):
-        print('Puedes visitar las áreas de esparcimiento')
-
+        self.mensaje = 'Puedes visitar las áreas de esparcimiento'
+        self.naci_aqui2 = 'Este es un mensaje que viene de la clase Comunidad'
+        return self.mensaje
 
 
 # Crear 5 atributos y 6 metodos propios que diferencien a cada una de estas subclases . Demostrar 2 casos de polimorfismo en metodos.
@@ -175,36 +179,48 @@ class CondominioVertical(Terreno, Comunidad):
 
     # 5 atributos
     tipo_condominio_vertical = 'Edificios habitacionales'
+    terreno_km2 = 48524
+    areas_verdes = 1425
+    riego_automatico = True
+    seguridad = True
 
     def __init__(self, nombre_condominio_vertical):
         self.nombre_condominio_vertical = nombre_condominio_vertical
 
-    # llamamoa a métodos de la clase Terreno
+    # llamamos a métodos de la clase Terreno
     def met_terr(self):
         super().factibilidad_agua_potable()
         super().factibilidad_electricidad()
+
+    def polimorfeame1(self):
         super().factiilidad_servicios_digitales()
+        self.message = 'Antes decia lo siguiente: 100 por ciento de factibilidad de electricidad'
+        return self.message, self.naci_aqui
 
     # llamamos a métodos de la clase Comunidad
     def met_com(self):
         super().ComiteMascotas()
+
+    def polimorfeame2(self):
         super().JuegosPasatiempos()
+        self.mensaje = 'Antes decia lo siguiente: Puedes visitar las áreas de esparcimiento'
+        return self.mensaje, self.naci_aqui2
 
     # métodos propios de la clase CondominioVertical
     def Ascensor(self):
-        pass
+        print("En estos momentos el servicio de ascensor se encuentra en mantenimiento, disculpe las molestias")
 
     def Terraza(self):
-        pass
+        print("Hermosas terrezas, únicas en Chile")
 
     def Quincho(sefl):
-        pass
+        print("Los mejores asados en tu quincho 3.0 'Lo último en tecnología'")
 
     def Piscina(self):
-        pass
+        print("Descubra las nuevas piscinas sin agua 'Antiahogos'")
 
     def Gym(self):
-        pass
+        print("Gym el Primo. Sin dolor no hay gloria")
 
 
 
@@ -251,7 +267,9 @@ class CondominioHorizontal(Terreno, Comunidad): # Seba
 
 
 if __name__ == "__main__":
+    
     # Pruebas de la clase Condominio
+    print("\n***** Aquí comienzan las pruebas en clase Condominio")
     condominio1 = Condominio() # Creo instancia de condominio
     print(condominio1.get_direccion()) # muestra direccion
     condominio1.set_direccion("Esta es la nueva direccion") # cambio direccion
@@ -264,3 +282,11 @@ if __name__ == "__main__":
     print(condominio1.get_guardias()) # Imprimo lista de guardias, para verificacion
     condominio1.del_guardia("Guardia a eliminar") # elimino guarida de lista
     print(condominio1.get_guardias()) # Imprimo lista de guardias, para verificacion
+    
+    # Pruebas en clase CondominioVertical
+    print("\n***** Aquí comienzan las pruebas en clase CondominioVertical")
+    edificio1 = CondominioVertical('Soy el edificio 1')
+    edificio2 = CondominioVertical('Soy el edificio 2')
+    print("Estos son los dos edificios creados:", edificio1.nombre_condominio_vertical, "y", edificio2.nombre_condominio_vertical)
+    print("Aca tenemos un mensaje usando polimorfismo: \n", edificio1.polimorfeame1())
+    print("Este es la segunda prueba de uso de polimorfismo: \n", edificio2.polimorfeame2())
