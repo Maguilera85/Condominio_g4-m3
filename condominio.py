@@ -326,6 +326,9 @@ if __name__ == "__main__":
     print("El nombre del condominio es:", condominio_horizonal.nombre_condominio_h, "&", condominio_horizonal2.nombre_condominio_h) 
     print("#### APLICANDO POLIMORFISMO ####", condominio_horizonal.factibilidad_agua_potable())
     print("#### APLICANDO POLIMORFISMO ####", condominio_horizonal.consulta_hta())
-    print(condominio_horizonal.cine(), condominio_horizonal.multicancha(), condominio_horizonal.estacionamietos(), 
-            condominio_horizonal.ciclovia(), condominio_horizonal.minimarket())
+    condominio_horizonal.cine()
+    condominio_horizonal.multicancha()
+    condominio_horizonal.estacionamietos()
+    condominio_horizonal.ciclovia()
+    condominio_horizonal.minimarket()
 
